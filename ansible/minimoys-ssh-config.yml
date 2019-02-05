@@ -1,0 +1,16 @@
+- hosts: minimoys
+  remote_user: orangepi
+  tasks:
+    - name: Ensure SSH is running
+      service:
+        name: ssh
+        state: started
+    - name: Copy sshd config file to client
+      become: yes
+      become_method: sudo
+      copy:
+        src=~/Code/minimoys/ansible/sshd_config
+        dest=/etc/ssh/sshd_config
+        owner=root
+        group=root
+        mode=0644
