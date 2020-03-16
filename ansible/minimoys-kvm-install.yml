@@ -1,7 +1,0 @@
-- hosts: minimoys
-  remote_user: orangepi
-  tasks:
-    - name: Install QemuKVM
-      apt:
-        name: qemu-kvm
-        state: latest

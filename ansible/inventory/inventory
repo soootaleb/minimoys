@@ -1,0 +1,9 @@
+[all]
+orange.pi       ansible_user=orangepi
+raspberry.pi    ansible_user=pi
+
+[masters]
+orange.pi       ansible_user=orangepi
+
+[workers]
+raspberry.pi    ansible_user=pi
