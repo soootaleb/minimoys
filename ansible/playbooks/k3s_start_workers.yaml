@@ -4,9 +4,11 @@
       get_url:
         dest: /tmp/install_k3s.sh
         url: https://get.k3s.io
-        mode: 0755
+        mode: "0755"
     - name: Register k3s agent
       environment:
         K3S_URL: "{{ k3s_master_url }}"
         K3S_TOKEN: "{{ k3s_master_token }}"
+        INSTALL_K3S_TYPE: "agent"
+        INSTALL_K3S_EXEC: "--no-flannel"
       command: /tmp/install_k3s.sh
