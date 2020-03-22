@@ -9,6 +9,4 @@
       environment:
         K3S_URL: "{{ k3s_master_url }}"
         K3S_TOKEN: "{{ k3s_master_token }}"
-        INSTALL_K3S_TYPE: "agent"
-        INSTALL_K3S_EXEC: "--no-flannel"
       command: /tmp/install_k3s.sh
